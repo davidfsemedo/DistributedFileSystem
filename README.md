@@ -1,7 +1,7 @@
 #Distributed File System
 
 ##Description
-This was an academic project from a Distributed Systems course, developed by me and Alexandre Garcia.
+This was an academic project from a Distributed Systems course, developed by me and [Alexandre Garcia](https://github.com/alexmgarcia).
 
 It implements a secure community of servers where each server exposes an hierarchy of folders/files.
 A server can operate with a local base folder or with a remote file system from a Dropbox or GoogleDrive account.
