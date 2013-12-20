@@ -48,18 +48,18 @@ The default basePath is ".", the current dir.
 
  - Start 1º Server WS: 
 ```
-		java tp2.DirServerWS -p Port -bp basePath communityName ip
+java tp2.DirServerWS -p Port -bp basePath communityName ip
 ```
 
  - Start 1º servidor RMI: 
- ```
-		java tp2.DirServerRMI -bp basePath communityName ip
+```
+java tp2.DirServerRMI -bp basePath communityName ip
 ```
 NOTE: Put the SSL X509 Certificates in the bin folder.
 
  - Start other servers WS: 
- ```
-		java tp2.DirServerWS -p Port -bp basePath communityName urlOfServerAlreadyInTheCommunity ip
+```
+java tp2.DirServerWS -p Port -bp basePath communityName urlOfServerAlreadyInTheCommunity ip
 ```
  - Start other servers RMI: 
  ```
@@ -67,15 +67,15 @@ NOTE: Put the SSL X509 Certificates in the bin folder.
 ```				
 - Start Server Google DriveRMI: 
 ```
-		java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerGoogleDriveRMI community ip
+java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerGoogleDriveRMI community ip
 ```
  - Start Server DropBoxRMI:
 ``` 
-		java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerDropBoxRMI community ip
+java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerDropBoxRMI community ip
 ```	
-	 - Start Server FlickrRMI: 
+- Start Server FlickrRMI: 
 ```
-		java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerFlickrRMI community ip
+java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerFlickrRMI community ip
 ```
 	
 	
@@ -83,11 +83,11 @@ NOTE: Put the SSL X509 Certificates in the bin folder.
 
 - Start client using server automatic discovery mechanism: 
 ```
-		java -cp .;json-simple-1.1.1.jar tp2.FileClient
+java -cp .;json-simple-1.1.1.jar tp2.FileClient
 ```		
- - Start client with an address from a server in a community:
+- Start client with an address from a server in a community:
 ```
-		java -cp .;json-simple-1.1.1.jar tp2.FileClient serverURL
+java -cp .;json-simple-1.1.1.jar tp2.FileClient serverURL
 ```
 
 		
