@@ -57,7 +57,7 @@ java tp2.DirServerRMI -bp basePath communityName ip
 ```
 NOTE: Put the SSL X509 Certificates in the bin folder.
 
- - Start other servers WS: 
+- Start other servers WS: 
 ```
 java tp2.DirServerWS -p Port -bp basePath communityName urlOfServerAlreadyInTheCommunity ip
 ```
@@ -86,10 +86,13 @@ java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirS
 ###Client
 
 - Start client using server automatic discovery mechanism: 
+
 ```
 java -cp .;json-simple-1.1.1.jar tp2.FileClient
-```		
+```
+
 - Start client with an address from a server in a community:
+
 ```
 java -cp .;json-simple-1.1.1.jar tp2.FileClient serverURL
 ```
