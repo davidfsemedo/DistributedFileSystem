@@ -45,7 +45,9 @@ The default port is 8080.
 The default basePath is ".", the current dir.
 
  - Start 1º Server WS: 
+```
 		java tp2.DirServerWS -p Port -bp basePath communityName ip
+```
 
  - Start 1º servidor RMI: 
 		java tp2.DirServerRMI -bp basePath communityName ip
