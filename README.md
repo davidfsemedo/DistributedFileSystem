@@ -51,7 +51,7 @@ The default basePath is ".", the current dir.
 java tp2.DirServerWS -p Port -bp basePath communityName ip
 ```
 
- - Start 1º servidor RMI: 
+- Start 1º servidor RMI: 
 ```
 java tp2.DirServerRMI -bp basePath communityName ip
 ```
@@ -61,18 +61,22 @@ NOTE: Put the SSL X509 Certificates in the bin folder.
 ```
 java tp2.DirServerWS -p Port -bp basePath communityName urlOfServerAlreadyInTheCommunity ip
 ```
- - Start other servers RMI: 
- ```
+
+- Start other servers RMI: 
+```
 		java tp2.DirServerRMI -bp basePath communityName urlOfServerAlreadyInTheCommunity ip
-```				
+```			
+	
 - Start Server Google DriveRMI: 
 ```
 java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerGoogleDriveRMI community ip
 ```
- - Start Server DropBoxRMI:
-``` 
+
+- Start Server DropBoxRMI:
+```
 java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerDropBoxRMI community ip
-```	
+```
+
 - Start Server FlickrRMI: 
 ```
 java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerFlickrRMI community ip
