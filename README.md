@@ -37,9 +37,11 @@ The first server that receives a broadcast request will respond with his address
 
 ###Server:
 
-
+```
 java DirServerWS [-p Port] [-bp BasePath] community [URL] serverIPAddress
+
 java DirServerRMI [-bp BasePath] community [URL] serverIPAddress
+```
 
 The default port is 8080.
 The default basePath is ".", the current dir.
@@ -50,32 +52,43 @@ The default basePath is ".", the current dir.
 ```
 
  - Start 1º servidor RMI: 
+ ```
 		java tp2.DirServerRMI -bp basePath communityName ip
-
+```
 NOTE: Put the SSL X509 Certificates in the bin folder.
 
  - Start other servers WS: 
+ ```
 		java tp2.DirServerWS -p Port -bp basePath communityName urlOfServerAlreadyInTheCommunity ip
-
+```
  - Start other servers RMI: 
+ ```
 		java tp2.DirServerRMI -bp basePath communityName urlOfServerAlreadyInTheCommunity ip
-				
+```				
 - Start Server Google DriveRMI: 
+```
 		java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerGoogleDriveRMI community ip
-
- - Start Server DropBoxRMI: 
+```
+ - Start Server DropBoxRMI:
+``` 
 		java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerDropBoxRMI community ip
-	
+```	
 	 - Start Server FlickrRMI: 
+```
 		java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerFlickrRMI community ip
+```
 	
 	
 ###Client
 
 - Start client using server automatic discovery mechanism: 
+```
 		java -cp .;json-simple-1.1.1.jar tp2.FileClient
-		
- - Start client with an address from a server in a community: 
+```		
+ - Start client with an address from a server in a community:
+```
 		java -cp .;json-simple-1.1.1.jar tp2.FileClient serverURL
+```
+
 		
 NOTE: To exit from a client it's necessary to use the command "exit" in order to successfully logout from the community.
