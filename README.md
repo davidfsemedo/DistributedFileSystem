@@ -10,13 +10,13 @@ A client is able to join an existing community and operate the whole File System
 Synchronization between a client's local system and a remote directory is supported.
 
 The following commands are supported in the File System: 
-- ######servers - list all the URL's from all the servers that belong to the community.
-- ######ls dir - list all the files/folders in the folder dir ("." and ".." have the usual meaning), files with the same name are shown as "name@server".
-- ######mkdir dir@server - creates a folder dir in the server "server".
-- ######rmdir dir@server - removes the folder dir in the server "server".
-- ######cp path1 path2 - copy file path1 to path2; A file in a specific server must be represented with path@server, a file in the client local file system must be represented as path@local.
-- ######rm path - removes the file path.
-- ######getattr path - list information about the file/folder path, including: name, boolean that denotes it it's a file and last modified date.
+- servers - list all the URL's from all the servers that belong to the community.
+- ls dir - list all the files/folders in the folder dir ("." and ".." have the usual meaning), files with the same name are shown as "name@server".
+- mkdir dir@server - creates a folder dir in the server "server".
+- rmdir dir@server - removes the folder dir in the server "server".
+- cp path1 path2 - copy file path1 to path2; A file in a specific server must be represented with path@server, a file in the client local file system must be represented as path@local.
+- rm path - removes the file path.
+- getattr path - list information about the file/folder path, including: name, boolean that denotes it it's a file and last modified date.
 
 NOTE: The file/folder path can be given to a command with "@server", where server is a server address. By default, it's assumed that the operation will be performed in the whole File System.
 
