@@ -5,20 +5,20 @@ This was an academic project from a Distributed Systems course, developed by me 
 
 It implements a secure community of servers where each server exposes an hierarchy of folders/files.
 A server can operate with a local base folder or with a remote file system from a Dropbox or GoogleDrive account.
-A client is able to join an existing community and operate the whole File System, in the sense that, each server folders/files hierarchy is abstracted in one single FileSystem. (Although, it supports operations in only one server)
+A client is able to join an existing community and operate the whole File System, in the sense that, each server folders/files hierarchy is abstracted in one single FileSystem. (Although, it supports operations in only one server).
 
 Synchronization between a client's local system and a remote directory is supported.
 
 The following commands are supported in the File System: 
-- servers - list all the URL's fromm all the servers that belong to the community.
-- ls dir -list all the files/folders in the folder dir ("." and ".." have the usual meaning), files with the same name are shown as "name@server";
+- servers - list all the URL's from all the servers that belong to the community.
+- ls dir - list all the files/folders in the folder dir ("." and ".." have the usual meaning), files with the same name are shown as "name@server".
 - mkdir dir@server - creates a folder dir in the server "server".
 - rmdir dir@server - removes the folder dir in the server "server".
 - cp path1 path2 - copy file path1 to path2; A file in a specific server must be represented with path@server, a file in the client local file system must be represented as path@local.
 - rm path - removes the file path.
 - getattr path - list information about the file/folder path, including: name, boolean that denotes it it's a file and last modified date.
 
-NOTE: The file/folder path can be given to a command with "@server", where server is a server address. By default, it's assume that the operation will be performed in the whole File System.
+NOTE: The file/folder path can be given to a command with "@server", where server is a server address. By default, it's assumed that the operation will be performed in the whole File System.
 
 ##Technical Details
  
@@ -59,13 +59,13 @@ NOTE: Put the SSL X509 Certificates in the bin folder.
 		java tp2.DirServerRMI -bp basePath communityName urlOfServerAlreadyInTheCommunity ip
 				
 - Start Server Google DriveRMI: 
-	java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerGoogleDriveRMI community ip
+		java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerGoogleDriveRMI community ip
 
  - Start Server DropBoxRMI: 
-	java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerDropBoxRMI community ip
+		java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerDropBoxRMI community ip
 	
 	 - Start Server FlickrRMI: 
-	java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerFlickrRMI community ip
+		java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirServerFlickrRMI community ip
 	
 	
 ###Client
