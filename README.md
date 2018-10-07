@@ -1,6 +1,6 @@
-#Distributed File System
+# Distributed File System
 
-##Description
+## Description
 This was an academic project from a Distributed Systems course, developed by me and [Alexandre Garcia](https://github.com/alexmgarcia).
 
 It implements a secure community of servers where each server exposes an hierarchy of folders/files.
@@ -20,7 +20,7 @@ The following commands are supported in the File System:
 
 NOTE: The file/folder path can be given to a command with "@server", where server is a server address. By default, it's assumed that the operation will be performed in the whole File System.
 
-##Technical Details
+## Technical Details
  
 - The servers communicate with each other through RMI and WebServices.
 - Each server communicates in only one of this technologies, although, they can all communicate with each other. To support this feature we implemented a "Connection Manager" that abstracts the protocol used by a server that has sent a message.
@@ -33,9 +33,9 @@ The server that receives the s_new server hello sends the complete list of addre
 The first server that receives a broadcast request will respond with his address and all the server addresses that he knows.
 
 
-##Instructions
+## Instructions
 
-###Server:
+### Server:
 
 ```
 java DirServerWS [-p Port] [-bp BasePath] community [URL] serverIPAddress
@@ -46,12 +46,12 @@ java DirServerRMI [-bp BasePath] community [URL] serverIPAddress
 The default port is 8080.
 The default basePath is ".", the current dir.
 
- - Start 1บ Server WS: 
+ - Start 1ยบ Server WS: 
 ```
 java tp2.DirServerWS -p Port -bp basePath communityName ip
 ```
 
-- Start 1บ servidor RMI: 
+- Start 1ยบ servidor RMI: 
 ```
 java tp2.DirServerRMI -bp basePath communityName ip
 ```
@@ -83,7 +83,7 @@ java -cp .;commons-codec-1.7.jar;json-simple-1.1.1.jar;scribe-1.3.2.jar tp2.DirS
 ```
 	
 	
-###Client
+### Client
 
 - Start client using server automatic discovery mechanism: 
 
